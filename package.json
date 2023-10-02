@@ -1,0 +1,43 @@
+{
+  "name": "puppy-chat-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "start": "nodemon ts-node -r tsconfig.json src/app.ts --watch | bunyan -o short",
+    "sequelize-cli": "node_modules/.bin/sequelize",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "build": "tsc -p tsconfig.buid.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "cors": "^2.8.5",
+    "csrf": "^3.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.11.0",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.33.0",
+    "sequelize-typescript": "^2.1.5",
+    "socket.io": "^4.7.2",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/bunyan": "^1.8.9",
+    "@types/cookie-parser": "^1.4.4",
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.18",
+    "@types/node": "^20.7.2",
+    "@types/validator": "^13.11.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.2.2"
+  }
+}
